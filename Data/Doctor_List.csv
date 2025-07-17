@@ -1,0 +1,53 @@
+Department,Doctor Name,Qualification,Experience,Available,Fees
+Cardiology,Dr. Rajiv Malhotra,"MD, DM (Cardiology)",15,Mon-Wed-Fri (10am–1pm),1200
+Cardiology,Dr. Nita Suresh,"MBBS, MD, DM",10,Tue-Thu (3pm–6pm),1000
+Cardiology,Dr. Abhishek Rana,"MBBS, MD",8,Mon-Fri (11am–2pm),800
+Cardiology,Dr. Farah Siddiqui,"MD, DNB Cardiology",12,Sat (10am–1pm),900
+Neurology,Dr. Vikas Sharma,"MBBS, DM Neurology",16,Mon-Wed-Fri (9am–12pm),1500
+Neurology,Dr. Renu Bhattacharya,"MD, DM",11,Tue-Thu (2pm–5pm),1200
+Neurology,Dr. Iqbal Rehman,"MBBS, DNB",9,Mon-Sat (4pm–6pm),950
+Neurology,Dr. Sneha Thakur,"MBBS, DM",7,Sat (10am–1pm),850
+Orthopedics,Dr. Arvind Mehta,"MS (Ortho), DNB",18,Mon-Fri (10am–12pm),1300
+Orthopedics,Dr. Shalini Nair,"MBBS, MS",13,Tue-Thu (5pm–7pm),1000
+Orthopedics,Dr. Devang Patel,MS Ortho,10,Mon-Wed (4pm–6pm),1100
+Orthopedics,Dr. Nishant Roy,"MBBS, D.Ortho",9,Sat (11am–2pm),950
+Pediatrics,Dr. Meera Kaul,MD Pediatrics,14,Mon-Sat (9am–11am),900
+Pediatrics,Dr. Amit Khanna,"MBBS, DCH",8,Tue-Thu (1pm–4pm),700
+Pediatrics,Dr. Tina Kaur,"MD, DNB Pediatrics",10,Mon-Wed-Fri (11am–1pm),850
+Pediatrics,Dr. Vipul Joseph,"MBBS, DCH",6,Sat (9am–11am),650
+ENT,Dr. Anjali Deshmukh,"MS (ENT), DNB",12,Mon-Fri (3pm–5pm),1000
+ENT,Dr. Sameer Baig,"MBBS, MS ENT",9,Tue-Thu (11am–2pm),900
+ENT,Dr. Rekha Das,"MBBS, DLO",7,Mon-Fri (2pm–4pm),800
+ENT,Dr. Arjun Hegde,MS (ENT),5,Sat (10am–12pm),750
+Dermatology,Dr. Pallavi Kapoor,MD Dermatology,11,Mon-Wed-Fri (10am–1pm),1000
+Dermatology,Dr. Kunal Batra,"MBBS, DDVL",8,Tue-Thu (2pm–5pm),850
+Dermatology,Dr. Richa Dey,"MD, DNB",10,Mon-Sat (11am–2pm),950
+Dermatology,Dr. Zoya Hashmi,"MBBS, MD",6,Sat (12pm–3pm),800
+General Surgery,Dr. Manoj Pillai,MS General Surgery,20,Mon-Wed-Fri (9am–11am),1300
+General Surgery,Dr. Seema Luthra,"MBBS, MS",14,Tue-Thu (3pm–6pm),1000
+General Surgery,Dr. Aftab Mirza,"MS, DNB",10,Mon-Sat (10am–12pm),1100
+General Surgery,Dr. Ashish Negi,"MBBS, MS",9,Sat (2pm–4pm),950
+Psychiatry,Dr. Jyoti Ranjan,MD Psychiatry,12,Mon-Fri (3pm–5pm),1000
+Psychiatry,Dr. Karthik Rao,"MBBS, DPM",8,Tue-Thu (10am–1pm),850
+Psychiatry,Dr. Nidhi Pathak,"MD, DNB",9,Mon-Wed-Fri (11am–2pm),900
+Psychiatry,Dr. Zainul Khan,MD,6,Sat (10am–1pm),750
+Ophthalmology,Dr. Swati Bansal,MS Ophthalmology,15,Mon-Fri (10am–12pm),1000
+Ophthalmology,Dr. Rohit Jain,"MBBS, MS",11,Tue-Thu (1pm–3pm),900
+Ophthalmology,Dr. Harshita Goel,DOMS,7,Mon-Wed-Fri (4pm–6pm),800
+Ophthalmology,Dr. Sankalp Mukherjee,"MBBS, DNB",6,Sat (2pm–5pm),850
+Gynecology,Dr. Neha Verma,MS Obstetrics,13,Mon-Wed-Fri (10am–1pm),1000
+Gynecology,Dr. Pooja Nambiar,"MBBS, DGO",9,Tue-Thu (3pm–6pm),900
+Gynecology,Dr. Shreya Sharma,MD Gynecology,12,Mon-Fri (12pm–2pm),950
+Gynecology,Dr. Rekha Prasad,"MBBS, MS",6,Sat (9am–12pm),850
+Urology,Dr. Ajay Tomar,MCh Urology,18,Mon-Wed-Fri (11am–1pm),1300
+Urology,Dr. Radhika Ghosh,"MBBS, MS, MCh",14,Tue-Thu (3pm–6pm),1100
+Urology,Dr. Tushar Pawar,"MS, DNB",10,Mon-Sat (4pm–6pm),1000
+Urology,Dr. Nilay Basu,"MBBS, MCh",9,Sat (1pm–4pm),950
+General Medicine,Dr. Asha Menon,MD Internal Medicine,20,Mon-Sat (10am–12pm),1000
+General Medicine,Dr. Vivek Agrawal,"MBBS, MD",15,Mon-Wed-Fri (2pm–4pm),900
+General Medicine,Dr. Snehal Joshi,"MBBS, MD",10,Tue-Thu (10am–1pm),850
+General Medicine,Dr. Rohit Sinha,"MBBS, MD",8,Sat (9am–11am),750
+Dental,Dr. Rakesh Tiwari,"BDS, MDS",12,Mon-Sat (10am–1pm),800
+Dental,Dr. Shruti Menon,BDS,7,Tue-Thu (3pm–6pm),600
+Dental,Dr. Aman Kapoor,"BDS, MDS Orthodontics",9,Mon-Fri (11am–2pm),700
+Dental,Dr. Priyanka Basu,"BDS, MDS",6,Sat (2pm–5pm),650

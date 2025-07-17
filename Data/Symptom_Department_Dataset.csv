@@ -1,0 +1,36 @@
+Disease,Symptoms,Department,Quick Action
+Hypertension,"Headache, dizziness, chest pain, nosebleeds, blurred vision, fatigue, high BP readings, short breath, pounding in chest/ears, swollen ankles, irregular heartbeat, red face",Cardiology,"Check BP, reduce salt, consult cardiologist"
+Epilepsy,"Seizures, sudden collapse, confusion, body jerks, staring spells, temporary loss of awareness, muscle twitching, clenched jaw, foaming at mouth, memory blackout, sudden fear, eye rolling",Neurology,"Ensure safety, do not restrict movement, consult neurologist"
+Fracture,"Intense pain in limbs/joints, swelling, bruising, deformity, inability to move limb, bone cracking sound, visible bone shift, pain during pressure, limb numbness, joint stiffness, blue skin around injury",Orthopedics,"Immobilize area, apply ice, go for X-ray"
+Pneumonia,"High fever, chills, cough with mucus, chest pain, shortness of breath, fatigue, wet cough, fast breathing, bluish lips, low oxygen levels, sweating, muscle aches",Pediatrics,"Give warm fluids, monitor fever, see pediatrician"
+Sinusitis,"Nasal congestion, facial pressure, thick mucus, headache, loss of smell, post-nasal drip, pain around eyes/nose, forehead heaviness, jaw pain, ear pressure, bad breath, dry cough",ENT,"Steam inhalation, saline spray, ENT visit"
+Eczema,"Dry, itchy skin, red patches, blisters, crusting, thickened skin, burning sensation, skin cracking, flaking, bumps on face/hands/legs, weeping fluid, intense night itch, rash around joints",Dermatology,"Use moisturizers, avoid allergens, consult dermatologist"
+Appendicitis,"Right lower belly pain, nausea, vomiting, loss of appetite, fever, abdominal bloating, pain worsens with movement, stiff belly, constipation or diarrhea, lower back pain, swelling in abdomen, urgent need to curl up",General Surgery,"Don’t eat/drink, rush to emergency/surgeon"
+Depression,"Persistent sadness, fatigue, sleep change, loss of interest, poor focus, appetite change, guilt, social withdrawal, crying spells, suicidal thoughts, body aches with no reason, irritability, negative thoughts",Psychiatry,"Talk to a professional, avoid isolation"
+Cataract,"Cloudy vision, glare, poor night vision, fading colors, double vision, eye glare, difficulty reading, frequent eyeglass change, blurry letters, seeing halos, dim vision indoors",Ophthalmology,"Wear UV glasses, consult ophthalmologist"
+PCOS,"Irregular periods, acne, weight gain, hair loss, facial hair, mood swings, fertility issues, oily skin, dark neck patches, lower belly pain, scalp thinning, tiredness, sleep issues",Gynecology,"Balanced diet, exercise, see gynecologist"
+Kidney Stones,"Sharp back/side pain, nausea, vomiting, burning urination, pink/bloody urine, frequent urge, lower abdominal cramps, urine blockage, groin discomfort, pain during urination, cloudy urine, sweating during pain",Urology,"Drink plenty of water, get ultrasound/CT"
+Typhoid,"Prolonged fever, weakness, headache, appetite loss, diarrhea or constipation, rash, slow heart rate, dry mouth, abdominal cramps, body chills, bitter taste in mouth, nausea",General Medicine,"Rest, light food, consult physician for test"
+Dental Caries,"Toothache, visible holes, sweet/hot/cold sensitivity, bad breath, gum swelling, pain while chewing, black spots on teeth, bleeding gums, jaw discomfort, food stuck in teeth, swollen face near tooth",Dental,"Rinse mouth, avoid sweets, visit dentist"
+Finger Injury / Cut,"Cut on finger, knife wound, bleeding, open wound, sharp object injury, finger pain, visible blood, wound from blade, bleeding hand, minor accident",General Surgery,"Clean the wound, apply pressure, consult for dressing or stitches"
+Hand Burn / Injury,"Burn on hand, hot water spill, red skin, blister, hand pain, skin peeling, palm burn, swollen fingers, accident with hot pan",General Surgery,"Rinse with cool water, do not apply ice directly, visit surgeon"
+Leg Injury / Swelling,"Pain in leg, swelling in thigh or calf, bruising, difficulty walking, twisted leg, limp, leg cramps, fall injury",Orthopedics,"Rest leg, apply ice, avoid pressure, visit orthopedic doctor"
+Chest Pain (Non-Cardiac),"Mild chest pain, chest tightness during movement, chest discomfort while breathing, soreness in chest muscles, after workout pain",General Medicine,"Rest, monitor symptoms, consult physician for check-up"
+Eye Redness / Irritation,"Red eyes, itchy eyes, burning in eyes, watery eyes, pain when blinking, blurred vision, dust allergy in eyes",Ophthalmology,"Rinse with clean water, avoid rubbing, see ophthalmologist"
+Ear Pain / Blockage,"Earache, blocked ear, ringing sound (tinnitus), reduced hearing, fluid in ear, ear swelling, pain after cold",ENT,"Avoid inserting anything, take warm compress, consult ENT"
+Face Swelling / Injury,"Swelling on cheek, bruise on face, injury on jaw, pain in facial bones, accident-related swelling",General Surgery,"Apply cold pack, avoid pressure, get examined for fracture or trauma"
+Neck Stiffness / Pain,"Neck pain, stiffness in neck, difficulty turning head, muscle spasm, slept wrong, stress-related neck tightness",Neurology / Orthopedics,"Apply hot compress, rest neck, consult specialist"
+Abdominal Cramps / Gas,"Stomach pain, gas, bloating, lower abdomen discomfort, pain after food, heaviness, indigestion",General Medicine,"Drink warm water, avoid heavy meals, consult physician"
+Tooth Injury / Broken Tooth,"Broken tooth, chipped tooth, bleeding gums, jaw pain, sharp pain while chewing, cracked tooth from fall",Dental,"Rinse mouth, apply cold compress outside cheek, visit dentist"
+Scalp Itching / Hair Loss,"Itchy scalp, dandruff, hair fall, dry scalp, scalp pimples, redness, hair thinning on crown",Dermatology,"Use medicated shampoo, avoid scratching, see dermatologist"
+Burn on Arm / Elbow,"Burn injury on arm, hot oil spill, red patch, blisters on elbow, pain while moving hand, skin peeling",General Surgery,"Cool area under running water, cover loosely, visit clinic"
+Back Pain (Mild),"Lower back pain, discomfort while bending, stiffness after waking, backache after sitting long hours",Orthopedics / General Medicine,"Take rest, apply hot pack, see doctor if pain persists"
+Knee Injury,"Pain in knee, twisting injury, swelling, difficulty standing, stiffness, injury while walking or playing",Orthopedics,"Rest, apply ice, use knee support, consult orthopedics"
+Head Injury (Mild),"Bump on head, mild swelling, dizziness, headache after fall, bruise on scalp",General Surgery / Neurology,"Apply cold pack, monitor for vomiting/confusion, consult doctor"
+
+
+
+
+
+
+
