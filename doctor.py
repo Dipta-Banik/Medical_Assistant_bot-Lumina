@@ -4,6 +4,7 @@ from difflib import SequenceMatcher
 import re
 import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 doctors_df = os.path.join(BASE_DIR, '..', 'Data', 'Doctor_List.csv')
 
 def get_doctors_df():
