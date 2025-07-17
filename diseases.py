@@ -3,6 +3,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from doctor import get_doctors_df, extract_department
 import re
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 dept_words = {
     # Cardiology
@@ -98,7 +101,8 @@ dept_words = {
 
 
 doctors_df = get_doctors_df()
-diseases_df = pd.read_csv("/Users/diptabanik/Desktop/Medical_chatbot/Data/Symptom_Department_Dataset.csv")
+
+diseases_df = os.path.join(BASE_DIR, '..', 'Data', 'Disease_List.csv')
 
 diseases_df['Symptoms'] = diseases_df['Symptoms'].str.lower()
 doctors_df = get_doctors_df()
