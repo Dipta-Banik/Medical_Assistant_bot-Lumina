@@ -5,8 +5,8 @@ from bot_logic import handle_query
 from doctor import doctor_info
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-LUMINA_AVATAR = os.path.join(BASE_DIR,'png', 'Avatar.png')
-USER_AVATAR = os.path.join(BASE_DIR, 'png', 'user.png')
+AVATAR = os.path.join(BASE_DIR,'png', 'Avater.png')
+USER_AVATAR = os.path.join(BASE_DIR, 'png', 'Lumina_logo.png')
 
 
 st.set_page_config(page_title="Lumina - Medical Chatbot", page_icon="🩺", layout="wide")
@@ -106,7 +106,7 @@ if "chat_history" not in st.session_state:
 
 for sender, message in st.session_state.chat_history:
     role = "assistant" if sender == "Lumina" else "user"
-    avatar = LUMINA_AVATAR if sender == "Lumina" else USER_AVATAR
+    avatar = AVATAR if sender == "Lumina" else USER_AVATAR
 
 if os.path.exists(avatar):
     with st.chat_message(role, avatar=avatar):
