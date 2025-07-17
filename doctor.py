@@ -2,8 +2,9 @@ import pandas as pd
 from datetime import datetime
 from difflib import SequenceMatcher
 import re
+import os
 
-doctors_df = pd.read_csv("/Users/diptabanik/Desktop/Medical_chatbot/Data/Doctor_List.csv")
+doctors_df = os.path.join(BASE_DIR, '..', 'Data', 'Doctor_List.csv')
 
 def get_doctors_df():
     return doctors_df
