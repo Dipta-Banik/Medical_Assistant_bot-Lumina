@@ -47,7 +47,13 @@ st.markdown("""
 
 
 with st.sidebar:
-    st.image("USER_AVATAR", width=200)
+    if os.path.exists(USER_AVATAR):
+        st.image(USER_AVATAR, width=200)
+    else:
+        st.error(f"User avatar not found at: {USER_AVATAR}")
+
+
+    
     st.markdown("## 👩‍⚕️ Lumina - Medical Assistant")
     st.markdown("""
         Hi, I'm **Lumina**, your smart healthcare assistant 🤖  
