@@ -47,7 +47,7 @@ st.markdown("""
 
 
 with st.sidebar:
-    st.image(USER_AVATAR, width=200)
+    st.image("USER_AVATAR", width=200)
     st.markdown("## 👩‍⚕️ Lumina - Medical Assistant")
     st.markdown("""
         Hi, I'm **Lumina**, your smart healthcare assistant 🤖  
