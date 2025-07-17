@@ -5,8 +5,6 @@ from doctor import get_doctors_df, extract_department
 import re
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 dept_words = {
     # Cardiology
     "cardio": "Cardiology",
@@ -102,7 +100,11 @@ dept_words = {
 
 doctors_df = get_doctors_df()
 
-diseases_df = os.path.join(BASE_DIR, '..', 'Data', 'Disease_List.csv')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DISEASES_PATH = os.path.join(BASE_DIR, '..', 'Data', 'Disease_List.csv')
+
+diseases_df = pd.read_csv(DISEASES_PATH)
+
 
 diseases_df['Symptoms'] = diseases_df['Symptoms'].str.lower()
 doctors_df = get_doctors_df()
