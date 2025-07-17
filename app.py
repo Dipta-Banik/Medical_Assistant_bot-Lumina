@@ -3,9 +3,10 @@ from datetime import datetime
 import time
 from bot_logic import handle_query
 from doctor import doctor_info
-
-LUMINA_AVATAR = "/Users/diptabanik/Desktop/Medical_chatbot/png/Avater.png"
-USER_AVATAR = "https://cdn.vectorstock.com/i/1000v/67/57/chat-bot-profile-icon-male-avatar-man-silhouette-vector-37236757.jpg" 
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LUMINA_AVATAR = os.path.join(BASE_DIR, '..', 'png', 'Avatar.png')
+USER_AVATAR = os.path.join(BASE_DIR, '..', 'png', 'user.png')
 
 
 st.set_page_config(page_title="Lumina - Medical Chatbot", page_icon="🩺", layout="wide")
