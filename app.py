@@ -5,8 +5,9 @@ from bot_logic import handle_query
 from doctor import doctor_info
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-LUMINA_AVATAR = os.path.join(BASE_DIR, '..', 'png', 'Avatar.png')
-USER_AVATAR = os.path.join(BASE_DIR, '..', 'png', 'user.png')
+LUMINA_AVATAR = os.path.join(BASE_DIR,'png', 'Avatar.png')
+if os.existpath
+USER_AVATAR = os.path.join(BASE_DIR, 'png', 'user.png')
 
 
 st.set_page_config(page_title="Lumina - Medical Chatbot", page_icon="🩺", layout="wide")
