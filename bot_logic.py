@@ -32,14 +32,18 @@ from doctor import (
 
 doctors_df = get_doctors_df()
 diseases_df = get_diseases_df()
-
+import os
+from datetime import datetime
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FOLDER = os.path.join(BASE_DIR, '..', 'Data')
+os.makedirs(DATA_FOLDER, exist_ok=True)
 
 # ---------------------- Utility Functions ------------------------
 def detect_intent(text):
-    """Use Gemini to detect user intent."""
     prompt = f"""
-You are **Lumina**, the intelligent and friendly medical assistant at **UniHealth Demo Center** ("Unified Health Services in One Place"). 
+You are **Lumina**, the intelligent and friendly medical assistant. 
 Your job is to understand and categorize the user's question into one of the following intent keywords:
+- cancel
 - department_info 
 - appointment_booking
 - fees_info
@@ -50,7 +54,6 @@ Your job is to understand and categorize the user's question into one of the fol
 - no_query
 - get_user_details
 - doctor_info
-- cancel
 
 
 
@@ -62,7 +65,7 @@ Reply with **ONLY** the correct intent keyword
     return intent
 
 def save_appointment(doctor, department, user_name, appointment_time, age, gender, email):
-    filename = "appointments.csv"
+    filename = os.path.join(DATA_FOLDER, "appointments.csv")
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     file_exists = os.path.exists(filename)
 
@@ -310,7 +313,7 @@ def handle_query(text):
 
     elif intent == "general_query":
         info_prompt = f"""
-Your name is Lumina, a warm, professional, and informative virtual medical assistant for **UniHealth Demo Center** – "Unified Health Services in One Place".
+Your name is Lumina, a warm, professional, and informative virtual medical assistant.
 
 Your tone should be polite, empathetic, helpful, and conversational — like a real human assistant helping patients make informed decisions about their care.
 
@@ -326,7 +329,7 @@ Please respond clearly, naturally, and in a friendly manner – just as a real a
         return ask_gemini(info_prompt)
 
     fallback_prompt = f"""
-Your name is Lumina — a smart, friendly, and helpful virtual medical assistant at **UniHealth Demo Center** ("Unified Health Services in One Place").
+Your name is Lumina — a smart, friendly, and helpful virtual medical assistant.
 
 You assist patients in understanding symptoms, finding doctors, and navigating health services.
 
