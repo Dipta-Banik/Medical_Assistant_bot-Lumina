@@ -101,7 +101,7 @@ dept_words = {
 doctors_df = get_doctors_df()
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DISEASES_PATH = os.path.join(BASE_DIR, '..', 'Data', 'Disease_List.csv')
+DISEASES_PATH = os.path.join(BASE_DIR, 'Data', 'Disease_List.csv')
 
 diseases_df = pd.read_csv(DISEASES_PATH)
 
