@@ -6,7 +6,6 @@ from doctor import doctor_info
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 LUMINA_AVATAR = os.path.join(BASE_DIR,'png', 'Avatar.png')
-if os.existpath
 USER_AVATAR = os.path.join(BASE_DIR, 'png', 'user.png')
 
 
