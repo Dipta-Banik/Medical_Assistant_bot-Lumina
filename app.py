@@ -49,7 +49,7 @@ st.markdown("""
 
 with st.sidebar:
     if os.path.exists(LOGO):
-        st.image(LOGO, width=150)
+        st.image(LOGO, width=100)
     else:
         st.error(f"Lumina logo not found at: {LOGO}")
 
@@ -62,7 +62,6 @@ with st.sidebar:
         - 🔍 Find doctors  
         - 🏥 Show departments  
         - 📅 Book appointments  
-        - 🚑 Handle emergencies
     """)
     st.markdown("### 💬 Quick Options")
     
