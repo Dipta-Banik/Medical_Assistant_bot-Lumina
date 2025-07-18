@@ -105,6 +105,11 @@ def handle_query(text):
     
     if memory.selected_doctor and not memory.user_name:
         name = text.strip().title()
+        if intent == "cancel" or text_lower.strip() == "cancel":
+            memory.stage = None
+            memory.selected_doctor = None
+            memory.last_department = None
+            return "☃️ No worries, I've cancelled the process. Let me know if you need help with something else!"
         if not is_valid_name(name):
             return "❌ Please enter a valid name (e.g., John Doe) or type 'cancel' to cancel booking."
         memory.user_name = name
@@ -115,6 +120,12 @@ def handle_query(text):
         )
 
     if memory.stage == "get_age" and not memory.age:
+        if intent == "cancel" or text_lower.strip() == "cancel":
+            memory.stage = None
+            memory.selected_doctor = None
+            memory.last_department = None
+            memory.user_name = None
+            return "☃️ No worries, I've cancelled the process. Let me know if you need help with something else!"
         if not is_valid_age(text.strip()):
             return "❌ Please enter a valid age (e.g., 25) or type 'cancel' to cancel booking."
         memory.age = text.strip()
@@ -123,6 +134,13 @@ def handle_query(text):
 
     if memory.stage == "get_gender" and not memory.gender:
         gender = text.strip().title()
+        if intent == "cancel" or text_lower.strip() == "cancel":
+            memory.stage = None
+            memory.selected_doctor = None
+            memory.last_department = None
+            memory.user_name = None
+            memory.get_age = None
+            
         if not is_valid_gender(gender):
             return "❌ Please enter a valid gender (Male or Female) or type 'cancel' to cancel booking."
         memory.gender = gender
