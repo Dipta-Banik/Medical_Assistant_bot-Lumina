@@ -18,7 +18,6 @@ def get_departments_and_counts():
     return "\n".join([f"🩺 {dept}: {count} doctor(s)" for dept, count in dept_counts.items()])
 
 
-
 def get_doctors_by_department(user_input):
     """Identify the department from the input and return doctors in that department."""
     user_input = user_input.strip().lower()
@@ -89,27 +88,7 @@ def get_doctors_by_department(user_input):
         [f"- {row['Doctor Name']} ({row['Qualification']}, ₹{row['Fees']})"
          for _, row in df.iterrows()]
     )
-
-
-
-
-
-
-
-"""def get_doctors_by_department(dept_name):
-    
-    dept_name = dept_name.strip().lower()
-    df = doctors_df[doctors_df['Department'].str.lower() == dept_name]
-    if df.empty:
-        return "❌ No such department found. Please check the name."
-    return "\n".join(
-        [f"- {row['Doctor Name']} ({row['Qualification']}, ₹{row['Fees']})"
-         for _, row in df.iterrows()]
-    )
-"""
-"""def get_fees_info():
-    return doctors_df[['Doctor Name', 'Department', 'Fees']].to_string(index=False)"""
-    
+ 
 def get_fees_info():
     """Return fee range per department with doctor names and average fee insights."""
     summary = []
@@ -137,8 +116,6 @@ def get_fees_info():
         })
 
     return pd.DataFrame(summary).to_string(index=False)
-
-
 
 def get_availability_info(doctor_name=None):
     """
@@ -238,17 +215,6 @@ def extract_doctor_name(text):
     return best_match
 
 
-"""def extract_department(text):
-    
-    text = text.lower()
-    words = re.findall(r'\b\w+\b', text)
-
-    for word in words:
-        if word in department_keywords:
-            return department_keywords[word]
-
-    return None"""
-
 def extract_department(text):
     text = text.lower()
     words = re.findall(r'\b\w+\b', text)
@@ -270,4 +236,3 @@ def doctor_info():
             output += f"- {row['Doctor Name']} ({row['Qualification']})\n"
 
     return output.strip()
-
