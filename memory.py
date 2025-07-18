@@ -19,6 +19,7 @@ class ConversationMemory:
         self.selected_date = None
         self.selected_time = None
         self.doc_list = None
+        self.reselect_date = None
 
     def reset(self):
         self.stage = None
@@ -33,6 +34,7 @@ class ConversationMemory:
         self.selected_date = None
         self.selected_time = None
         self.doc_list = None
+        self.reselect_date = None
 
 global_memory = ConversationMemory()
 
