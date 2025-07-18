@@ -1,5 +1,5 @@
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 from difflib import SequenceMatcher
 import re
 import os
@@ -151,6 +151,25 @@ def parse_availability_string(availability_str):
 
     return full_days, (start_time, end_time)
 
+def get_next_dates_for_days(target_days, count=3):
+    """
+    Given list of day names like ['Monday', 'Wednesday'], returns next `count` upcoming dates for those days.
+    """
+    today = datetime.today()
+    upcoming_dates = []
+    day_lookup = {day: i for i, day in enumerate(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])}
+    
+    for i in range(1, 15):
+        check_date = today + timedelta(days=i)
+        if check_date.strftime('%A') in target_days:
+            upcoming_dates.append(check_date.strftime('%d %B %Y'))
+            if len(upcoming_dates) >= count:
+                break
+    return upcoming_dates
+
+
+
+
 
 def is_doctor_available_on_date(doctor_name, selected_date_str):
     """
@@ -160,20 +179,21 @@ def is_doctor_available_on_date(doctor_name, selected_date_str):
     availability_info = get_availability_info()
     availability_str = availability_info.get(doctor_name)
     if not availability_str:
-        return False, None, None
+        return False, None, None,None
     try:
         date_obj = datetime.strptime(selected_date_str.strip().title(), "%d %B")
         date_obj = date_obj.replace(year=datetime.now().year)
-        day_name = date_obj.strftime("%A")
+        selected_day_name = date_obj.strftime("%A")
     except ValueError:
-        return False, None, None
+        return False, None, None, None
 
     available_days, time_range = parse_availability_string(availability_str)
+    is_available = selected_day_name in available_days
 
-    if day_name in available_days:
-        return True, day_name, time_range  # e.g., ('Wednesday', ('10 AM', '1 PM'))
-    else:
-        return False, day_name, None
+    next_available_dates = get_next_dates_for_days(available_days)
+
+    return is_available, selected_day_name, time_range if is_available else None, next_available_dates
+
 
 
 def get_doctor_details(doctor_name):
