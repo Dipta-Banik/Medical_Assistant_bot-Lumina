@@ -12,8 +12,8 @@ load_dotenv()
 
 FROM_EMAIL = "bbbd68859@gmail.com"
 PASSWORD =os.getenv("EMAIL_PASSWORD")
-HOST = "smtp.gmail.com"
-PORT = 587
+HOST = os.getenv("SMTP")
+PORT = os.getenv("CONNECT")
 
 def send_email(full_name, doctor, department, appointment_time, age, gender, to_email):
     
@@ -107,6 +107,3 @@ def send_email(full_name, doctor, department, appointment_time, age, gender, to_
         smtp.quit()
         if os.path.exists(qr_filename):
             os.remove(qr_filename)
-
-
-
