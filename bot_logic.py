@@ -159,7 +159,7 @@ def handle_query(text):
             memory.stage = "reselect_date"
             memory.selected_date = None
             return (
-            f"❌ The doctor is not available on{selected_day_name}.\n\n"
+            f"❌ The doctor is not available on {selected_day_name}.\n\n"
             f"🔜 The doctor is available on the following upcoming dates:\n{formatted_dates}\n\n"
             f"📅 Please choose one of the above dates to proceed with your appointment."
             )
