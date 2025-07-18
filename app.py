@@ -7,6 +7,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 AVATAR = os.path.join(BASE_DIR,'png', 'Avater.png')
 USER_AVATAR = os.path.join(BASE_DIR, 'png', 'user.png')
+LOGO = os.path.join(BASE_DIR, 'png', 'Lumina_logo.png)
 
 
 st.set_page_config(page_title="Lumina - Medical Chatbot", page_icon="🩺", layout="wide")
@@ -47,10 +48,10 @@ st.markdown("""
 
 
 with st.sidebar:
-    if os.path.exists(USER_AVATAR):
-        st.image(USER_AVATAR, width=200)
+    if os.path.exists(LOGO):
+        st.image(LOGO, width=200)
     else:
-        st.error(f"User avatar not found at: {USER_AVATAR}")
+        st.error(f"Lumina logo not found at: {LOGO}")
 
 
     
