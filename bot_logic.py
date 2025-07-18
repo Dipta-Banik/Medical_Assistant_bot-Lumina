@@ -127,18 +127,24 @@ def handle_query(text):
             return "❌ Please enter a valid gender (Male or Female) or type 'cancel' to cancel booking."
         memory.gender = gender
         memory.stage = "get_date"
-        return "📅 Please mention your preferred appointment **datee** (e.g., 15 July)."
+        return "📅 Please mention your preferred appointment **datee** (e.g., 25 July)."
 
-    if memory.stage == "get_date" and not memory.selected_date:
+    if memory.stage == "get_date" or memory.stage == "reselect_date" and not memory.selected_date:
         if not is_valid_date(text.strip()):
             return "❌ Please enter a valid **future date** (e.g., 15 July)."
     
         memory.selected_date = text.strip().title()
-        available, day_name, time_range = is_doctor_available_on_date(memory.selected_doctor, memory.selected_date)
-
+        available, selected_day_name, time_range, next_available_dates  = is_doctor_available_on_date(memory.selected_doctor, memory.selected_date)
+        
         if not available:
-            return f"❌ The doctor is not available on **{memory.selected_date}** because it's a **{day_name}**. Please choose a different date for your appointment."
-        start, end = time_range
+            formatted_dates = "\n".join([f"• {date}" for date in next_available_dates])
+            memory.stage = "reselect_date"
+            memory.selected_date = None
+            return (
+            f"❌ The doctor is not available on{selected_day_name}.\n\n"
+            f"🔜 The doctor is available on the following upcoming dates:\n{formatted_dates}\n\n"
+            f"📅 Please choose one of the above dates to proceed with your appointment."
+            )
         memory.stage = "get_time"
         return f"🗓️ You selected **{memory.selected_date}** ({day_name}).\n" \
            f"⏰ The doctor is available from **{start} to {end}**.\n" \
