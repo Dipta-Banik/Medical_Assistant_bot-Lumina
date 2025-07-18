@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-FROM_EMAIL = "bbbd68859@gmail.com"
+FROM_EMAIL = os.getenv("FROM_MAIL")
 PASSWORD =os.getenv("EMAIL_PASSWORD")
 HOST = os.getenv("SMTP")
 PORT = os.getenv("CONNECT")
