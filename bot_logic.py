@@ -145,8 +145,9 @@ def handle_query(text):
             f"🔜 The doctor is available on the following upcoming dates:\n{formatted_dates}\n\n"
             f"📅 Please choose one of the above dates to proceed with your appointment."
             )
+        start, end = time_range
         memory.stage = "get_time"
-        return f"🗓️ You selected **{memory.selected_date}** ({day_name}).\n" \
+        return f"🗓️ You selected **{memory.selected_date}** ({selected_day_name}).\n" \
            f"⏰ The doctor is available from **{start} to {end}**.\n" \
            f"Please enter your preferred time (e.g., {start})."
 
@@ -258,7 +259,8 @@ def handle_query(text):
             memory.stage = "get_name"
             return (
                 f"📝 Great! Please tell me the **doctor's name** you'd like to book with from the **{memory.last_department}** department.\n\n"
-                f"Here are the available doctors:\n{memory.doc_list}\n Please choose a doctor by name to proceed with your appointment.\n"
+                f"Here are the available doctors:\n{memory.doc_list}\n"
+                f"Please choose a doctor by name to proceed with your appointment.\n"
             )
         
         elif not memory.selected_doctor:
