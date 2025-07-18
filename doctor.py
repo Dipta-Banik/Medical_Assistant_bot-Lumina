@@ -5,7 +5,9 @@ import re
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-doctors_df = os.path.join(BASE_DIR,'Data', 'Doctor_List.csv')
+doctors_path = os.path.join(BASE_DIR,'Data', 'Doctor_List.csv')
+
+doctors_df = pd.read_csv(doctors_path)
 
 def get_doctors_df():
     return doctors_df
