@@ -1,2 +1,2 @@
-Timestamp,Doctor,User Name,Appointment Time,Name,age,gender,contact,Department
+Timestamp,Doctor,Department,User Name,Appointment Time,Name,age,gender,contact
 2025-07-18 01:53:31,Dr. Arjun Hegde,ENT,Deni,"19 July, 10 AM",Deni,44,F,diptabanik03@gmail.com
