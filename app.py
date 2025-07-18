@@ -108,7 +108,7 @@ for sender, message in st.session_state.chat_history:
     role = "assistant" if sender == "Lumina" else "user"
     avatar = AVATAR if sender == "Lumina" else USER_AVATAR
 
-if os.path.exists(avatar):
+    
     with st.chat_message(role, avatar=avatar):
         if sender == "Lumina" and message == Lumina_intro:
             st.markdown("#### 👩‍⚕️ Lumina", unsafe_allow_html=True)
@@ -118,26 +118,6 @@ if os.path.exists(avatar):
             f"<div class='{bubble_class}'><strong>{sender if sender == 'You' else ''}</strong><br>{message}</div>",
             unsafe_allow_html=True
         )
-else:
-    st.warning(f"Avatar not found: {avatar}")
-
-
-
-
-
-
-
-
-    
-    """with st.chat_message(role, avatar=avatar):
-        if sender == "Lumina" and message == Lumina_intro:
-            st.markdown("#### 👩‍⚕️ Lumina", unsafe_allow_html=True)
-
-        bubble_class = "user-msg" if sender == "You" else "bot-msg"
-        st.markdown(
-            f"<div class='{bubble_class}'><strong>{sender if sender == 'You' else ''}</strong><br>{message}</div>",
-            unsafe_allow_html=True
-        )"""
 
 user_query = st.chat_input("Type your message here...")
 
