@@ -7,7 +7,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 AVATAR = os.path.join(BASE_DIR,'png', 'Avater.png')
 USER_AVATAR = os.path.join(BASE_DIR, 'png', 'user.png')
-LOGO = os.path.join(BASE_DIR, 'png', 'Lumina_logo.png)
+LOGO = os.path.join(BASE_DIR, 'png', 'Lumina_logo.png')
 
 
 st.set_page_config(page_title="Lumina - Medical Chatbot", page_icon="🩺", layout="wide")
