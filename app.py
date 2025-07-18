@@ -49,7 +49,7 @@ st.markdown("""
 
 with st.sidebar:
     if os.path.exists(LOGO):
-        st.image(LOGO, width=200)
+        st.image(LOGO, width=150)
     else:
         st.error(f"Lumina logo not found at: {LOGO}")
 
