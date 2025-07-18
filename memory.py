@@ -39,7 +39,7 @@ class ConversationMemory:
 global_memory = ConversationMemory()
 
 
-print("👍🏼")
+#print("👍🏼")
 
 """"while True:
     user_input = input("🧑 You: ").strip()
