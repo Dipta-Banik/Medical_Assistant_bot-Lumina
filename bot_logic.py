@@ -72,7 +72,7 @@ def save_appointment(doctor, department, user_name, appointment_time, age, gende
     with open(filename, mode='a', newline='') as file:
         writer = csv.writer(file)
         if not file_exists:
-            writer.writerow(["Timestamp", "Doctor", "User Name", "Appointment Time", "Name", "age", "gender", "contact", "Department"])
+            writer.writerow(["Timestamp", "Doctor", "Department", "User Name", "Appointment Time", "Name", "age", "gender", "contact",])
         writer.writerow([
             now,
             doctor,
@@ -111,7 +111,7 @@ def handle_query(text):
         memory.stage = "get_age"
         return(
             f"🧑 Thanks, {memory.user_name}!\n\n"
-            f"Let's keep going — could you please tell me **How old are you?** (input should be number or integer)"
+            f"Let's keep going — could you please tell me **How old are you?** (e.g. 25)"
         )
 
     if memory.stage == "get_age" and not memory.age:
@@ -149,7 +149,9 @@ def handle_query(text):
         selected_time = text.strip().upper()
         memory.appointment_time = f"{memory.selected_date}, {selected_time}"
         memory.stage = "get_email"
-        return "📧 Please provide your **valid email ID** (e.g., xyz@gmail.com)."
+        return ("📧 Please provide your **valid email ID** (e.g., xyz@gmail.com)."
+                "📧 A valid email is required so I can send you the appointment details — this is important even for demo purposes. 😊"
+                )
 
 
     if memory.stage == "get_email" and memory.selected_doctor and memory.user_name and memory.appointment_time and not memory.contact:
